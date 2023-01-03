@@ -180,9 +180,6 @@
                            <button class = "btn btn-danger" id = "pause">
                              <span class = "fa fa-pause"></span>
                            </button>
-                           <button class = "btn btn-danger" id = "play">
-                              <span class = "fa fa-play"></span>
-                           </button>
                     </div>
                    </div>
             </div>
@@ -351,11 +348,17 @@
  <script>
     $(document).ready(function(){
         $("#hopes").carousel({interval : 1000})
-        $("#play").click(function(){
-            $("#hopes").carousel('cycle')
-        });
         $("#pause").click(function(){
-           $("#hopes").carousel('pause')
+            if ($("#pause").children("span").hasClass('fa-pause')) {
+                    $("#hopes").carousel('pause');
+                    $("#pause").children("span").removeClass('fa-pause');
+                    $("#pause").children("span").addClass('fa-play');
+                }
+            else {
+                $("#hopes").carousel("cycle");
+                $("#pause").children("span").removeClass('fa-play');
+                $("#pause").children("span").addClass('fa-pause');
+            }
         });
     });
 </script>
