@@ -42,3 +42,26 @@ body{
     border-bottom: 1px solid #ddd;
     padding: 10px;
 }
+.carousel{
+    background :rgba(15, 13, 55, 0.82)
+}
+.carousel-item{
+    height : 300px;
+}
+.carousel-item img{
+
+    left :0px;
+    top :0px;
+    min-height : 300px;
+}
+.carousel-caption{
+   top: 60px;
+}
+.nonsmok{
+    background:green;
+}
+#css{
+    position:absolute;
+    right:0px;
+    bottom:0px;
+}
